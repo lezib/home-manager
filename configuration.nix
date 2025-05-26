@@ -118,11 +118,6 @@
   programs.zsh.enable = true;
   users.users.mau.shell = pkgs.zsh; # make it default shell for all users
 
-  # enable ssh
-  services.openssh = {
-    enable = true;
-  };
-
   # Bootloader.
 
   # Some programs need SUID wrappers, can be configured further or are

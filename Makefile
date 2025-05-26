@@ -1,6 +1,6 @@
 .PHONY: update
 update :
-	home-manager switch --flake .#mau -I nixos-config=.
+	home-manager switch --flake .#mau -I nixos-config=./configuration.nix
 
 .PHONY: clean
 clean:
