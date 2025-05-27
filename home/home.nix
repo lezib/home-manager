@@ -10,37 +10,17 @@
       oh-my-zsh
     ];
 
+    sessionVariables = {
+      EDITOR= "nvim";
+    };
+
     username = "mau";
     homeDirectory = "/home/mau";
     stateVersion = "23.11";
   };
   
-  programs.zsh = { 
-    enable = true;
-    enableCompletion = true;
-    enableAutosuggestions = true;
-    syntaxHighlighting.enable = true;
-    autocd = true;
-
-    shellAliases = { 
-      c = "clear";
-      ls = "ls --color";
-      la = "ls -a";
-      ll = "ls -al";
-      lsl = "ls -l";
-    };
-
-    oh-my-zsh = {
-      enable = true;
-      plugins = [
-        "sudo"
-      ];
-      theme = "terminalparty";
-    };
-
-    dirHashes = {
-      dl = "$HOME/Downloads";
-    };
+  # import zsh configuration
+  # programs.zsh = import ./zsh.nix { inherit lib pkgs; };
 
     #loginShellInit = ''
       ## ajout de bind
@@ -66,5 +46,4 @@
 	#fi
       #}
     #'';
-  };
 }
