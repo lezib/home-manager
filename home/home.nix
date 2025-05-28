@@ -2,12 +2,16 @@
 {
   home = {
     packages = with pkgs; [
-      hello
       gnumake
       neovim
       tmux
       zsh
       oh-my-zsh
+      fzf
+      bat
+      nerdfonts
+      fd
+      eza
     ];
 
     sessionVariables = {
@@ -17,6 +21,22 @@
     username = "mau";
     homeDirectory = "/home/mau";
     stateVersion = "23.11";
+  };
+
+  programs = {
+    home-manager = {
+      enable = true;
+    };
+
+    git = {
+      enable = true;
+    };
+
+    fzf = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+
   };
   
   # import zsh configuration

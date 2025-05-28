@@ -1,15 +1,21 @@
 # Function to seach in all directory and open it in neovim
 function nvimfzf {
-	export FZF_DEFAULT_COMMAND='fdfind --no-ignore --hidden --exclude .git'
-	DIRECTORY_PRINT=$(echo -e "[DIRECTORY]\n")
+	#FZF_DEFAULT_COMMAND="fd --no-ignore --hidden --exclude .git"
 	EXA_OPTIONS="--icons -la --color=always"
 	BAT_OPTIONS="--number -f --force-colorization"
 
-	NVIM_FZF_PREVIEW="if [[ -d {} ]]; then echo -e \"[DIRECTORY]\n\"; exa $EXA_OPTIONS {}; else batcat $BAT_OPTIONS {}; fi"
-	dest_find=$(fzf --scheme=path  --preview "$NVIM_FZF_PREVIEW")
+	NVIM_FZF_PREVIEW="if [[ -d {} ]]; then eza $EXA_OPTIONS {}; else bat $BAT_OPTIONS {}; fi"
+	#dest=$( $FZF_DEFAULT_COMMAND | fzf --scheme=path  --preview "$NVIM_FZF_PREVIEW" | tr -d '\n')
 
-	if [[ ! -z "$dest_file" ]]; then
-		cd "$dest_file" && nvim .
+	dest=$(fd --no-ignore --hidden --exclude .git | fzf --scheme=path  --preview "$NVIM_FZF_PREVIEW" | tr -d '\n')
+
+	#echo "DEBUG : dest= '$dest' end"
+	if [[ -d "$dest" ]]; then
+		cd "$dest" && nvim .
+	elif [[ -f "$dest" ]]; then
+		nvim "$dest"
+	else
+		echo "Path unknown or inacessible"
 	fi
 }
 

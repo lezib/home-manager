@@ -24,10 +24,10 @@ in {
 
 		shellAliases = { 
 			c = "clear";
-			ls = "ls --color";
-			la = "ls -a";
-			ll = "ls -al";
-			lsl = "ls -l";
+			ls = "eza --icons";
+			la = "eza -a --icons";
+			ll = "eza -al --icons";
+			lsl = "eza -l --icons";
 		};
 
 		oh-my-zsh = {
