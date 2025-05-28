@@ -1,17 +1,14 @@
 # function to tp to a searched directory
 
 function cdfzf {
-	export FZF_DEFAULT_COMMAND='fd --no-ignore --type d --hidden --exclude .git'
-	DIRECTORY_PRINT=$(echo -e "[DIRECTORY]\n")
 	EXA_OPTIONS="--icons -la --color=always"
-	BAT_OPTIONS="--number -f --force-colorization"
 
 	CD_FZF_PREVIEW="eza $EXA_OPTIONS {};"
 
-	dest_file=$(fzf --scheme=path --preview "$CD_FZF_PREVIEW")
+	dest=$(fd --no-ignore --type d --hidden --exclude .git | fzf --scheme=path --preview "$CD_FZF_PREVIEW" | tr -d '\n')
 
-	if [[ ! -z "$dest_file" ]]; then
-		cd "$dest_file"
+	if [[ ! -z "$dest" ]]; then
+		cd "$dest"
 	fi
 }
 
