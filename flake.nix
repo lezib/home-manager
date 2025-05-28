@@ -20,7 +20,7 @@
         mau = home-manager.lib.homeManagerConfiguration {
 	  inherit pkgs;
 	  modules = [ 
-	    ./home/home.nix 
+	    ./home/default.nix 
 	    ./share/zsh.nix
 	  ];
 	};
