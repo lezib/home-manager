@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ lib, pkgs, inputs, ... }:
 let 
 	# directory of all functions
 	functionsDir = ../shell;
