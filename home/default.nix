@@ -6,7 +6,6 @@ in
   home = {
     packages = with pkgs; [
       gnumake
-      neovim
       tmux
       zsh
       oh-my-zsh
