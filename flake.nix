@@ -21,7 +21,9 @@
 	  inherit pkgs;
 	  modules = [ 
 	    ./home/default.nix 
-	    ./share/zsh.nix
+	    ./share/zsh.nix    # config console
+	    ./share/tmux.nix   # config tmux
+	    ./share/tmuxp.nix  # config setup of tmux env
 	  ];
 	};
       };
