@@ -1,0 +1,10 @@
+# test
+session_name: home-manager
+start_directory: ~/home-manager
+windows:
+  - window_name: Edition
+    panes:
+      - nvim .
+  - window_name: Testing
+    panes:
+      - echo 'This is for testing your config !'
