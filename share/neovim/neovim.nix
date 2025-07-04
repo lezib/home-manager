@@ -58,32 +58,34 @@ in {
 
 		};
 	  };
+
 	  undotree.enable = true;
 	  indent-blankline.enable = true;
+	  nvim-autopairs.enable = true;
+	  web-devicons.enable = true;
+	  #which-key-nvim.enable = true;
 
 	  # Temporary ones
     };
 
-	#extraPlugins = with pkgs.vimPlugins; [
-	#  # Permanent ones
-	#  autoclose-nvim
-	#  dressing-nvim
-	#  nvim-highlight-colors
-	#  neoscroll-nvim
-	#  todo-comments-nvim
-	#  which-key-nvim
+	extraPlugins = with pkgs.vimPlugins; [
+	  # Permanent ones
+	  #dressing-nvim
+	  #nvim-highlight-colors
+	  #neoscroll-nvim
+	  #todo-comments-nvim
+	  which-key-nvim
 
-	#  # Temporary ones
-	#];
+	  # Temporary ones
+	];
 
-	#extraConfigLua = readAllExtraConfig [
-	#  "autoclose.lua"
+	extraConfigLua = readAllExtraConfig [
 	#  "dressing.lua"
 	#  "highlight-colors.lua"
 	#  "neoscroll.lua"
 	#  "todo-comments.lua"
-	#  "which-key.lua"
-	#];
+	  "which-key.lua"
+	];
 
 	keymaps = [
 	  # keybind template 

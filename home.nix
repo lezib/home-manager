@@ -11,7 +11,7 @@ in
       oh-my-zsh
       fzf
       bat
-      nerdfonts
+      nerdfetch
       fd
       eza
     ];
@@ -22,7 +22,7 @@ in
 
     username = "mau";
     homeDirectory = "/home/mau";
-    stateVersion = "23.11";
+    stateVersion = "24.11";
   };
 
   programs = {
