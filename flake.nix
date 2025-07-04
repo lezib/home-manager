@@ -29,10 +29,11 @@
 	  inherit pkgs;
 	  modules = [ 
 	    ./home.nix 
+		#./share/default.nix
 	    ./share/zsh.nix    # config console
 	    ./share/tmux.nix   # config tmux
 	    ./share/tmuxp.nix  # config setup of tmux env
-	    ./share/neovim.nix
+	    ./share/neovim/neovim.nix
 	    nixvim.homeManagerModules.nixvim
 	  ];
 	};
