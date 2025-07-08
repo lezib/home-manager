@@ -3,6 +3,10 @@ let
   reader = path: lib.fileContents path ;
 in
 {
+  fonts.fontconfig = {
+  	enable = true;
+  };
+
   home = {
     packages = with pkgs; [
       gnumake
@@ -11,9 +15,11 @@ in
       oh-my-zsh
       fzf
       bat
-      nerdfetch
       fd
       eza
+	  ripgrep
+	  nerd-fonts.caskaydia-mono
+	  xclip
     ];
 
     sessionVariables = {
