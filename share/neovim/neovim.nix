@@ -42,9 +42,53 @@ in {
 	  # Permanent ones
       lualine.enable = true;
 	  oil.enable = true;
+	  indent-blankline.enable = true;
+	  nvim-autopairs.enable = true;
+	  web-devicons.enable = true;
+	  gitsigns.enable = true;
+	  # lspconfig.enable = true;
+	  treesitter = {
+	  	enable = true;
+		nixGrammars = true;
+		settings = {
+			highlight.enable = true;
+			indent.enable = true;
+		};
+	  };
+	  treesitter-context = {
+		enable = true;
+		settings = { max_line = 2; };
+	  };
+		
+	  cmp = {
+	  	enable = true;
+		autoEnableSources = true;
+	  };
+
+	  lsp = {
+	  	enable = true;
+		servers = {
+			lua_ls.enable = true;
+			clangd.enable = true;
+			markdown_oxide.enable = true;
+			pyright.enable = true;
+			gopls.enable = true;
+			nixd.enable = true;
+			ocamllsp.enable = true;
+			yamlls.enable = true;
+			asm_lsp.enable = true;
+		};
+	  };
+
+	  undotree = {
+		enable = true;
+		settings = {
+			DiffAutoOpen = true;
+		};
+	  };
+
 	  telescope = {
 	    enable = true;
-		#autoLoad = true;
 		keymaps = {
 		  #"" = {action = ""; options = { desc = ""; }; };
 		  "<leader>ff" = { action = "find_files"; };
@@ -53,38 +97,49 @@ in {
 		  "<leader>fc" = { action = "grep_string"; };
 		  #"<leader>ft" = { action = "TodoTelescope"; };
 		  "<leader>fb" = { action = "buffers"; };
-		  #"<leader>fm" = { action = "harpoon marks"; };
 		  "<leader>fw" = { action = "current_buffer_fuzzy_find"; };
 
 		};
 	  };
-
-	  undotree.enable = true;
-	  indent-blankline.enable = true;
-	  nvim-autopairs.enable = true;
-	  web-devicons.enable = true;
-	  #which-key-nvim.enable = true;
-
+	  snacks = {
+		enable = true;
+		settings = {
+			bigfile.enabled = true;
+			notifier = {
+				enabled = true;
+				timeout = 4000;
+			};
+			quickfile.enabled = true;
+			statuscolumn.enabled = true;
+		};
+	  };
 	  # Temporary ones
     };
 
 	extraPlugins = with pkgs.vimPlugins; [
 	  # Permanent ones
-	  #dressing-nvim
-	  #nvim-highlight-colors
-	  #neoscroll-nvim
-	  #todo-comments-nvim
+	  # dressing-nvim
+	  nvim-highlight-colors
+	  neoscroll-nvim
+	  todo-comments-nvim
 	  which-key-nvim
 
 	  # Temporary ones
 	];
 
 	extraConfigLua = readAllExtraConfig [
-	#  "dressing.lua"
-	#  "highlight-colors.lua"
-	#  "neoscroll.lua"
-	#  "todo-comments.lua"
+	  # Permanent ones
+	  "highlight-colors.lua"
+	  "neoscroll.lua"
+	  "todo-comments.lua"
 	  "which-key.lua"
+
+	  # Temporary ones
+	];
+
+	extraPackages = with pkgs; [
+		stylua
+		nixpkgs-fmt
 	];
 
 	keymaps = [
@@ -104,7 +159,7 @@ in {
 	  { mode = ["n"]; action = ":split<CR>"; key = "<leader>as"; options = { silent = false; desc = "Hsplit"; }; }
 	
 	  # NOTE : navigation in multiple buffers
-	  { mode = ["n"]; action = "<cmd>lua require('undotree').toggle()<cr>"; key = "<leader>u"; options = { silent = false; desc = "Undotree"; }; }
+	  #{ mode = ["n"]; action = "<cmd>lua require('undotree').toggle()<cr>"; key = "<leader>u"; options = { silent = false; desc = "Undotree"; }; }
 	  { mode = ["n"]; action = "<C-w>h"; key = "<leader>ah"; options = { silent = false; }; }
 	  { mode = ["n"]; action = "<C-w>j"; key = "<leader>aj"; options = { silent = false; }; }
 	  { mode = ["n"]; action = "<C-w>k"; key = "<leader>ak"; options = { silent = false; }; }
@@ -126,6 +181,8 @@ in {
 	  { mode = ["n"]; action = "<cmd>bprev<CR>"; key = "<leader>eh"; options = { silent = false; desc = "prev buffer"; }; }
 	  { mode = ["n"]; action = "<cmd>bnext<CR>"; key = "<leader>el"; options = { silent = false; desc = "next buffer"; }; }
 	  { mode = ["n"]; action = "<cmd>bdelete!<CR>"; key = "<leader>er"; options = { silent = false; desc = "next buffer"; }; }
+
+	  { mode = ["n" "v"]; action = "<cmd>UndotreeToggle<CR><cmd>UndotreeFocus<CR>"; key = "<leader>u"; options = { silent = false; desc = "Undotree"; }; }
 	
 	  # NOTE : remap déplacement de lignes
 	  { mode = ["n"]; action = "J"; key = "H"; options = { silent = false; }; }
