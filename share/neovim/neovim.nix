@@ -129,7 +129,6 @@ in {
 
 	extraPlugins = with pkgs.vimPlugins; [
 	  # Permanent ones
-	  # dressing-nvim
 	  nvim-highlight-colors
 	  neoscroll-nvim
 	  todo-comments-nvim
