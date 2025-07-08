@@ -37,6 +37,15 @@ in {
       tabstop = 4;		# Set tabulation at 4 spaces
       expandtab = false;	# Put spaces instead of tabulation
     };
+	
+	diagnostic.settings = {
+		signs.text = {
+				ERROR = "";
+				WARN = "";
+				HINT = "󰠠";
+				INFO = "";
+			};
+	};
 
     plugins = {
 	  # Permanent ones
@@ -65,6 +74,8 @@ in {
 		autoEnableSources = true;
 	  };
 
+	  lsp-lines = { enable = true; };
+	  lspkind = { enable = true; };
 	  lsp = {
 	  	enable = true;
 		servers = {
