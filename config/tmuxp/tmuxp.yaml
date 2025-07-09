@@ -1,0 +1,9 @@
+session_name: tmuxp
+start_directory: ~/home-manager/config/tmuxp
+windows:
+  - window_name: Edition
+    panes:
+      - nvim .
+  - window_name: Testing
+    panes:
+      - cd ../..

@@ -5,5 +5,8 @@
     enable = true;
   };
 
-  home.file.".tmuxp".source = ../config/tmuxp;
+  home.file.".tmuxp" = {
+		enable = true;
+		source = ../config/tmuxp;
+	};
 }

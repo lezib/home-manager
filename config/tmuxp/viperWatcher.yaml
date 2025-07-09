@@ -1,0 +1,15 @@
+session_name: viperWatcher
+start_directory: ~/projects/viperwatcher
+windows:
+  - window_name: Edition Viper
+    panes:
+      - cd app && nvim .
+  - window_name: Testing Viper
+    panes:
+      - echo 'This is for testing viperWatcher'
+  - window_name: Edition CICD
+    panes:
+      - cd testapi && nvim .
+  - window_name: Test CICD
+    panes:
+      - echo 'This is for testing a CICD'
