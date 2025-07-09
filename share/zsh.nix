@@ -7,7 +7,8 @@ let
 	modules = [
 	  "nvimfzf.zsh"
 	  "cdfzf.zsh"
-        ];
+	  "tmuxpfzf.zsh"
+    ];
 
 	makePath = list: builtins.map (name: "/" + functionsDir + "/" + name) list;
 	getContent = list: builtins.map (path: lib.fileContents path) list;
