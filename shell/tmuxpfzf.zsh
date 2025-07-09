@@ -15,5 +15,5 @@ function tmuxpfzf {
 	tmuxp load ${dest}
 }
 
-bindkey -s ^t "tmuxpfzf\n" # binding to ctrl+t
+bindkey -s ^k "tmuxpfzf\n" # binding to ctrl+k
 
