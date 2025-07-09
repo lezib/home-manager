@@ -25,10 +25,10 @@ in {
 
 		shellAliases = { 
 			c = "clear";
-			ls = "eza --icons";
-			la = "eza -a --icons";
-			ll = "eza -al --icons";
-			lsl = "eza -l --icons";
+			ls = "eza --icons --color=always";
+			la = "eza -a --icons --color=always";
+			ll = "eza -al --icons --color=always";
+			lsl = "eza -l --icons --color=always";
 		};
 
 		oh-my-zsh = {
@@ -39,7 +39,7 @@ in {
 			theme = "terminalparty";
 		};
 		
-		initExtra = allFunctions;
+		initContent = allFunctions;
 
 		dirHashes = {
 			dl = "$HOME/Downloads";
