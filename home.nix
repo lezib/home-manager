@@ -20,6 +20,7 @@ in
 	  ripgrep
 	  nerd-fonts.caskaydia-mono
 	  xclip
+	  go
     ];
 
     sessionVariables = {

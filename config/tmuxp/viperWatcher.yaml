@@ -1,5 +1,5 @@
 session_name: viperWatcher
-start_directory: ~/projects/viperwatcher
+start_directory: /home/mau/projects/viperWatcher
 windows:
   - window_name: Edition Viper
     panes:
