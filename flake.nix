@@ -34,6 +34,7 @@
 	    ./share/tmux.nix   # config tmux
 	    ./share/tmuxp.nix  # config setup of tmux env
 	    ./share/neovim/neovim.nix
+		./share/firefox.nix
 	    nixvim.homeManagerModules.nixvim
 	  ];
 	};
