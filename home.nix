@@ -28,8 +28,6 @@ in
 			EDITOR= "nvim";
 		};
 
-		username = "mau";
-		homeDirectory = "/home/mau";
 		stateVersion = "24.11";
 	};
 
