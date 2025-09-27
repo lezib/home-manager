@@ -36,6 +36,7 @@ in {
       shiftwidth = 4;		# Set auto tabulation at 4 spaces
       tabstop = 4;		# Set tabulation at 4 spaces
       expandtab = false;	# Put spaces instead of tabulation
+	  colorcolumn = "80";
     };
 	
 	diagnostic.settings = {
