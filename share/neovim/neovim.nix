@@ -50,10 +50,9 @@ in {
 
 		autoCmd = [
 			{
-				command = "echo 'Entering a C or C++ file'";
+				command = "silent ! clang-format -i %";
 				event = [
-					"BufEnter"
-					"BufWinEnter"
+					"BufWritePost"
 				];
 				pattern = [
 					"*.c"
