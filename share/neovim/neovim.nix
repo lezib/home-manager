@@ -40,6 +40,8 @@ in {
 		};
 
 		diagnostic.settings = {
+            # virtual_lines.current_line = true;
+            virtual_text = true;
 			signs.text = {
 				ERROR = "";
 				WARN = "";
@@ -89,8 +91,12 @@ in {
 				autoEnableSources = true;
 			};
 
-			lsp-lines = { enable = true; };
+			lsp-lines = {
+                enable = true;
+                autoLoad = true;
+            };
 			lspkind = { enable = true; };
+            lsp-status = { enable = true ; };
 			lsp = {
 				enable = true;
 				servers = {
@@ -229,6 +235,10 @@ in {
 			{ mode = ["n"]; action = "za"; key = "<leader>st"; options = { silent = false; desc = "toggle fold"; }; }
 			{ mode = ["n"]; action = "f{zf%"; key = "<leader>s{"; options = { silent = false; desc = "fold {}"; }; }
 			{ mode = ["n"]; action = "<cmd>set foldmethod=indent<CR>"; key = "<leader>sf"; options = { silent = false; desc = "fold over indent"; }; }
+            # NOTE : map lsp
+			{ mode = ["n"]; action = "<cmd>lua vim.diagnostic.config({ virtual_lines = true, virtual_text = false })<CR>"; key = "<leader>xl"; options = { silent = false; desc = "Full lines mode"; }; }
+			{ mode = ["n"]; action = "<cmd>lua vim.diagnostic.config({ virtual_lines = false, virtual_text = true })<CR>"; key = "<leader>xt"; options = { silent = false; desc = "Partial lines mode"; }; }
+			{ mode = ["n"]; action = "<cmd>lua vim.lsp.buf.code_action()<CR>"; key = "<leader>xf"; options = { silent = false; desc = "Quick fix"; }; }
 		];
 	};
 }
