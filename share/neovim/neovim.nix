@@ -66,6 +66,16 @@ in {
 
 		plugins = {
 			# Permanent ones
+            blink-cmp = {
+                enable = true;
+                settings = {
+                    keymap = {
+                        "<C-ENTER>" = [
+                            "select_and_accept"
+                        ];
+                    };
+                };
+            };
 			lualine.enable = true;
 			oil.enable = true;
 			indent-blankline.enable = true;
