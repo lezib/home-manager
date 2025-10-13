@@ -53,14 +53,15 @@ in {
 		autoCmd = [
 			{
 				command = "silent ! clang-format -i %";
-				event = [
-					"BufWritePost"
-				];
-				pattern = [
-					"*.c"
-					"*.h"
-				];
+				event = [ "BufWritePost" ];
+				pattern = [ "*.c" "*.h" ];
 			}
+            {
+				command = "set tabstop=2 | set shiftwidth=2";
+				event = [ "BufEnter" ];
+				pattern = [ "*.lua" "*.nix" ];
+			}
+
 		];
 
 
@@ -68,12 +69,8 @@ in {
 			# Permanent ones
             blink-cmp = {
                 enable = true;
-                settings = {
-                    keymap = {
-                        "<C-ENTER>" = [
-                            "select_and_accept"
-                        ];
-                    };
+                settings.keymap = {
+                    "<C-ENTER>" = [ "select_and_accept" ];
                 };
             };
 			lualine.enable = true;
