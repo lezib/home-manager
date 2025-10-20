@@ -1,48 +1,48 @@
 { lib, pkgs, inputs, ... }:
 let 
-	# directory of all functions
-	functionsDir = ../shell;
+  # directory of all functions
+  functionsDir = ../shell;
 
-	# Names of the files containing the functions
-	modules = [
-	  "nvimfzf.zsh"
-	  "cdfzf.zsh"
-	  "tmuxpfzf.zsh"
-    ];
+  # Names of the files containing the functions
+  modules = [
+    "nvimfzf.zsh"
+    "cdfzf.zsh"
+    "tmuxpfzf.zsh"
+  ];
 
-	makePath = list: builtins.map (name: "/" + functionsDir + "/" + name) list;
-	getContent = list: builtins.map (path: lib.fileContents path) list;
+  makePath = list: builtins.map (name: "/" + functionsDir + "/" + name) list;
+  getContent = list: builtins.map (path: lib.fileContents path) list;
 
-	# load all file
-	allFunctions = lib.concatStrings (getContent (makePath modules));
+  # load all file
+  allFunctions = lib.concatStrings (getContent (makePath modules));
 in {
-	programs.zsh = {
-		enable = true;
-		enableCompletion = true;
-		autosuggestion.enable = true;
-		syntaxHighlighting.enable = true;
-		autocd = true;
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
+    autocd = true;
 
-		shellAliases = { 
-			c = "clear";
-			ls = "eza --icons --color=always";
-			la = "eza -a --icons --color=always";
-			ll = "eza -al --icons --color=always";
-			lsl = "eza -l --icons --color=always";
-		};
+    shellAliases = { 
+      c = "clear";
+      ls = "eza --icons --color=always";
+      la = "eza -a --icons --color=always";
+      ll = "eza -al --icons --color=always";
+      lsl = "eza -l --icons --color=always";
+    };
 
-		oh-my-zsh = {
-			enable = true;
-			plugins = [
-				"sudo"
-			];
-			theme = "terminalparty";
-		};
-		
-		initContent = allFunctions;
+    oh-my-zsh = {
+      enable = true;
+      plugins = [
+        "sudo"
+      ];
+      theme = "terminalparty";
+    };
 
-		dirHashes = {
-			dl = "$HOME/Downloads";
-		};
-	};
+    initContent = allFunctions;
+
+    dirHashes = {
+      dl = "$HOME/Downloads";
+    };
+  };
 }

@@ -6,7 +6,7 @@
   };
 
   home.file.".tmuxp" = {
-		enable = true;
-		source = ../config/tmuxp;
-	};
+    enable = true;
+    source = ../config/tmuxp;
+  };
 }

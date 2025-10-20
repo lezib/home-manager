@@ -115,13 +115,13 @@
   programs.zsh.enable = true;
   users.users.mau.shell = pkgs.zsh; # make it default shell for all users
   fonts = {
-	fontDir.enable = true;
-	fontconfig.enable = true;
-	# fonts = with pkgs; [
-	#      (nerdfonts.override { fonts = [ "Caskaydia-cove" ]; })
-	#    ];
+    fontDir.enable = true;
+    fontconfig.enable = true;
+    # fonts = with pkgs; [
+    #      (nerdfonts.override { fonts = [ "Caskaydia-cove" ]; })
+    #    ];
   }
 
-  system.stateVersion = "24.11"; # Did you read the comment?
+    system.stateVersion = "24.11"; # Did you read the comment?
 
 }

@@ -26,54 +26,54 @@
     in {
       homeConfigurations = {
         "mau" = home-manager.lib.homeManagerConfiguration {
-	  inherit pkgs;
-	  modules = [ 
-		({
-		  home.username = "mau";
-		  home.homeDirectory = "/home/mau";
-		})
-	    ./home.nix 
-		#./share/default.nix
-	    ./share/zsh.nix    # config console
-	    ./share/tmux.nix   # config tmux
-	    ./share/tmuxp.nix  # config setup of tmux env
-	    ./share/neovim/neovim.nix
-		./share/firefox.nix
-	    nixvim.homeManagerModules.nixvim
-	  ];
-	};
-	"maurin.audenard" = home-manager.lib.homeManagerConfiguration {
-	  inherit pkgs;
-	  modules = [ 
-		({
-		  home.username = "maurin.audenard";
-		  home.homeDirectory = "/home/maurin.audenard";
-		})
-	    ./home.nix 
-	    ./share/zsh.nix    # config console
-	    ./share/tmux.nix   # config tmux
-	    # ./share/tmuxp.nix  # config setup of tmux env
-	    ./share/neovim/neovim.nix
-		# ./share/firefox.nix
-	    nixvim.homeManagerModules.nixvim
-	  ];
-	};
-	"julie.viossat" = home-manager.lib.homeManagerConfiguration {
-	  inherit pkgs;
-	  modules = [ 
-		({
-		  home.username = "julie.viossat";
-		  home.homeDirectory = "/home/julie.viossat";
-		})
-	    ./home.nix 
-	    ./share/zsh.nix    # config console
-	    ./share/tmux.nix   # config tmux
-	    # ./share/tmuxp.nix  # config setup of tmux env
-	    ./share/neovim/neovim.nix
-		# ./share/firefox.nix
-	    nixvim.homeManagerModules.nixvim
-	  ];
-	};
+          inherit pkgs;
+          modules = [ 
+            ({
+              home.username = "mau";
+              home.homeDirectory = "/home/mau";
+            })
+            ./home.nix 
+            #./share/default.nix
+            ./share/zsh.nix    # config console
+            ./share/tmux.nix   # config tmux
+            ./share/tmuxp.nix  # config setup of tmux env
+            ./share/neovim/neovim.nix
+            ./share/firefox.nix
+            nixvim.homeManagerModules.nixvim
+          ];
+        };
+        "maurin.audenard" = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          modules = [ 
+            ({
+              home.username = "maurin.audenard";
+              home.homeDirectory = "/home/maurin.audenard";
+            })
+            ./home.nix 
+            ./share/zsh.nix    # config console
+            ./share/tmux.nix   # config tmux
+            # ./share/tmuxp.nix  # config setup of tmux env
+            ./share/neovim/neovim.nix
+            # ./share/firefox.nix
+            nixvim.homeManagerModules.nixvim
+          ];
+        };
+        "julie.viossat" = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          modules = [ 
+            ({
+              home.username = "julie.viossat";
+              home.homeDirectory = "/home/julie.viossat";
+            })
+            ./home.nix 
+            ./share/zsh.nix    # config console
+            ./share/tmux.nix   # config tmux
+            # ./share/tmuxp.nix  # config setup of tmux env
+            ./share/neovim/neovim.nix
+            # ./share/firefox.nix
+            nixvim.homeManagerModules.nixvim
+          ];
+        };
       };
     };
 }
