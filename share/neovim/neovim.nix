@@ -61,6 +61,11 @@ in {
         event = [ "BufEnter" ];
         pattern = [ "*.lua" "*.nix" ];
       }
+      {
+        command = "set tabstop=4 | set shiftwidth=4";
+        event = [ "BufEnter" ];
+        pattern = [ "*.c" "*.py" ];
+      }
     ];
 
     plugins = {

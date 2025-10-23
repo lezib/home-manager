@@ -29,6 +29,11 @@ in {
       la = "eza -a --icons --color=always";
       ll = "eza -al --icons --color=always";
       lsl = "eza -l --icons --color=always";
+      ga = "git add";
+      gm = "git commit -m";
+      gt = "git tag -ma";
+      gp = "git push";
+      gpt = "git push --follow-tags";
     };
 
     oh-my-zsh = {
