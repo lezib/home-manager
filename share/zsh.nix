@@ -29,6 +29,7 @@ in {
       la = "eza -a --icons --color=always";
       ll = "eza -al --icons --color=always";
       lsl = "eza -l --icons --color=always";
+      gs = "git status";
       ga = "git add";
       gm = "git commit -m";
       gt = "git tag -ma";
