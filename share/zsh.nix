@@ -29,6 +29,8 @@ in {
       la = "eza -a --icons --color=always";
       ll = "eza -al --icons --color=always";
       lsl = "eza -l --icons --color=always";
+
+      # git aliases
       gs = "git status";
       gl = "git log";
       ga = "git add";
@@ -36,6 +38,10 @@ in {
       gt = "git tag -ma";
       gp = "git push";
       gpt = "git push --follow-tags";
+      # advanced
+      glg = "git log --all --oneline --graph";
+      gap = "git add -p";
+      gsh = "git show";
     };
 
     oh-my-zsh = {
