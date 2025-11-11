@@ -38,6 +38,8 @@ in {
       gt = "git tag -ma";
       gp = "git push";
       gpt = "git push --follow-tags";
+      gsw = "git switch";
+      gb = "git branch";
       # advanced
       glg = "git log --all --oneline --graph";
       gap = "git add -p";
