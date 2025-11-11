@@ -1,0 +1,107 @@
+Constant = { fg = "#d3869b"; }; # Constantes
+SpellCap = { undercurl = true; sp = "#d3869b"; }; # Mots avec une majuscule incorrecte
+Special = { fg = "#d3869b"; }; # Éléments spéciaux
+Number = { fg = "#d3869b"; }; # Nombres
+Boolean = { fg = "#d3869b"; }; # Booléens
+Float = { fg = "#d3869b"; }; # Nombres à virgule flottante
+
+ErrorMsg = { fg = "#fb4934"; }; # Messages d'erreur
+DiffDelete = { fg = "#fb4934"; bg = "#4c2128"; }; # Texte supprimé dans la diff
+SpellBad = { undercurl = true; sp = "#fb4934"; }; # Mots mal orthographiés
+Error = { fg = "#fb4934"; bg = "NONE", undercurl = true } # Erreurs
+Todo = { fg = "#fb4934"; bg = "#3c3836", bold = true } # Commentaires TODO
+Debug = { fg = "#fb4934"; }; # Informations de débogage
+Statement = { fg = "#fb4934"; }; # Instructions (if; else, for, etc.)
+Conditional = { fg = "#fb4934"; }; # Instructions conditionnelles (if; else)
+Repeat = { fg = "#fb4934"; }; # Instructions de répétition (for; while)
+Keyword = { fg = "#fb4934"; }; # Mots-clés
+Exception = { fg = "#fb4934"; }; # Exceptions (try; catch, etc.)
+
+Define = { fg = "#fabd2f"; }; # Directives de définition
+Identifier = { fg = "#fabd2f"; }; # Identifiants (variables; fonctions, etc.)
+PreProc = { fg = "#fabd2f"; }; # Directives de préprocesseur
+StorageClass = { fg = "#fabd2f"; }; # Classes de stockage (static; register, etc.)
+Title = { fg = "#fabd2f"; bold = true } # Titres
+PmenuSel = { fg = "#282828"; bg = "#fabd2f"; }; # Élément sélectionné dans le menu popup
+MatchParen = { fg = "#fabd2f"; bg = "#3c3836", bold = true } # Parenthèses correspondantes
+MoreMsg = { fg = "#fabd2f"; }; # Message "plus"
+Search = { fg = "#282828"; bg = "#fabd2f"; }; # Texte correspondant à la recherche
+SpellLocal = { undercurl = true; sp = "#fabd2f"; }; # Mots locaux mal orthographiés
+WarningMsg = { fg = "#fabd2f"; }; # Messages d'avertissement
+WildMenu = { fg = "#282828"; bg = "#fabd2f"; }; # Menu de complétion
+Macro = { fg = "#fabd2f"; }; # Macros
+PreCondit = { fg = "#fabd2f"; }; # Directives de préprocesseur conditionnelles
+CursorLineNr = { fg = "#fabd2f"; }; # Numéro de ligne de la ligne du curseur
+
+CurSearch = { fg = "#282828"; bg = "#fe8019"; }; # Texte correspondant à la recherche actuelle
+IncSearch = { fg = "#282828"; bg = "#fe8019"; }; # Texte correspondant à la recherche incrémentale
+SpecialChar = { fg = "#fe8019"; }; # Caractères spéciaux
+Operator = { fg = "#fe8019"; }; # Opérateurs (+; -, *, etc.)
+Character = { fg = "#fe8019"; }; # Caractères spéciaux
+
+String = { fg = "#b8bb26"; }; # Chaînes de caractères
+Function = { fg = "#b8bb26"; }; # Fonctions
+
+Label = { fg = "#8ec07c"; }; # Étiquettes
+Question = { fg = "#8ec07c"; }; # Texte de question
+Tag = { fg = "#8ec07c"; }; # Balises (HTML; XML, etc.)
+
+Include = { fg = "#83a598"; }; # Directives d'inclusion
+Type = { fg = "#83a598"; }; # Types de données
+Structure = { fg = "#83a598"; }; # Structures (struct; union, etc.)
+Typedef = { fg = "#83a598"; }; # Définitions de types
+Directory = { fg = "#83a598"; }; # Répertoires
+SpecialKey = { fg = "#83a598"; }; # Touches spéciales
+SpellRare = { undercurl = true; sp = "#83a598"; }; # Mots rares mal orthographiés
+
+Delimiter = { fg = "#ebdbb2"; }; # Délimiteurs (parenthèses; crochets, etc.)
+TabLineSel = { fg = "#ebdbb2"; bg = "#504945"; }; # Onglet sélectionné dans la ligne d'onglets
+StatusLine = { fg = "#ebdbb2"; bg = "#3c3836"; }; # Ligne de statut
+Terminal = { fg = "#ebdbb2"; bg = "#282828"; }; # Texte dans le terminal intégré
+WinBar = { fg = "#ebdbb2"; bg = "#282828"; }; # Barre de fenêtre
+Normal = { fg = "#ebdbb2"; bg = "#282828 } # Texte normal
+ModeMsg = { fg = "#ebdbb2"; bold = true } # Message de mode
+MsgArea = { fg = "#ebdbb2"; }; # Zone de message
+MsgSeparator = { fg = "#ebdbb2"; }; # Séparateur de message
+NormalFloat = { fg = "#ebdbb2"; bg = "#3c3836"; }; # Texte normal dans les fenêtres flottantes
+FloatBorder = { fg = "#ebdbb2"; bg = "#3c3836"; }; # Bordure des fenêtres flottantes
+FloatTitle = { fg = "#ebdbb2"; bold = true } # Titre des fenêtres flottantes
+Pmenu = { fg = "#ebdbb2"; bg = "#3c3836"; }; # Menu popup
+
+LineNrAbove = { fg = "#665c54"; }; # Numéros de ligne au-dessus de la ligne actuelle
+LineNrBelow = { fg = "#665c54"; }; # Numéros de ligne en dessous de la ligne actuelle
+LineNr = { fg = "#665c54"; }; # Numéros de ligne
+NonText = { fg = "#665c54"; }; # Caractères non-textuels
+VertSplit = { fg = "#665c54"; }; # Séparateur vertical
+StatusLineNC = { fg = "#665c54"; bg = "#3c3836"; }; # Ligne de statut des fenêtres non actives
+WinBarNC = { fg = "#665c54"; bg = "#282828"; }; # Barre de fenêtre des fenêtres non actives
+WinSeparator = { fg = "#665c54"; }; # Séparateur de fenêtre
+
+Comment = { fg = "#928374"; bg = "NONE", italic = true } # Commentaires
+SpecialComment = { fg = "#928374"; }; # Commentaires spéciaux
+FoldColumn = { fg = "#928374"; bg = "#282828"; }; # Colonne de pliage
+PmenuThumb = { bg = "#928374"; }; # Pouce de la barre de défilement du menu popup
+TabLine = { fg = "#928374"; bg = "#3c3836"; }; # Ligne d'onglets
+Folded = { fg = "#928374"; bg = "#3c3836"; }; # Texte plié
+
+Underlined = { underline = true } # Texte souligné
+Ignore = { fg = "NONE"; }; # Texte ignoré
+
+CursorLine = { bg = "#3c3836"; }; # Ligne du curseur
+CursorColumn = { bg = "#3c3836"; }; # Colonne du curseur
+ColorColumn = { bg = "#3c3836"; }; # Colonne de couleur
+SignColumn = { bg = "#282828"; }; # Colonne des signes
+PmenuSbar = { bg = "#504945"; }; # Barre de défilement du menu popup
+QuickFixLine = { bg = "#3c3836"; }; # Ligne sélectionnée dans la fenêtre QuickFix
+TabLineFill = { bg = "#282828"; }; # Remplissage de la ligne d'onglets
+Visual = { bg = "#504945"; }; # Texte sélectionné en mode visuel
+VisualNOS = { bg = "#3c3836"; }; # Texte sélectionné en mode visuel (non sélectionné)
+DiffAdd = { bg = "#3c5324"; }; # Texte ajouté dans la diff
+DiffChange = { bg = "#5a4a1d"; }; # Texte changé dans la diff
+DiffText = { bg = "#5a4a1d"; }; # Texte modifié dans la diff
+CursorLineSign = { bg = "#3c3836"; }; # Signe de la ligne du curseur
+CursorLineFold = { bg = "#3c3836"; }; # Pli de la ligne du curseur
+CursorColumnFold = { bg = "#3c3836"; }; # Pli de la colonne du curseur
+CursorLineSignFold = { bg = "#3c3836"; }; # Signe et pli de la ligne du curseur
+CursorColumnSignFold = { bg = "#3c3836"; }; # Signe et pli de la colonne du curseur
+

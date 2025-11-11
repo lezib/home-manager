@@ -9,15 +9,20 @@ let
   # load all file
   readAllExtraConfig = conf: lib.concatStrings (getContent (makePath conf));
   #readAllExtraConfig = conf: lib.concatStrings (getContent conf);
+
+  # le 
+  C_Constant = "#d3869b";
+  C_Error = "#fb4934";
+  C_Keyword = "#fb4934";
+  C_Yellow = "#fabd2f";
 in {
   programs.nixvim = {
     enable = true;
     globals.mapleader = " ";
 
-    colorschemes.gruvbox = {
-      enable = true;
-    };
-
+    # colorschemes.gruvbox = {
+    #   enable = true;
+    # };
     opts = {
 
       termguicolors = true;
@@ -250,5 +255,43 @@ in {
       { mode = ["n"]; action = "<cmd>lua vim.diagnostic.config({ virtual_lines = false, virtual_text = true })<CR>"; key = "<leader>xt"; options = { silent = false; desc = "Partial lines mode"; }; }
       { mode = ["n"]; action = "<cmd>lua vim.lsp.buf.code_action()<CR>"; key = "<leader>xf"; options = { silent = false; desc = "Quick fix"; }; }
     ];
+
+    highlight = {
+      Constant = { fg = C_Constant; }; # Constantes
+      SpellCap = { undercurl = true; sp = C_Constant; }; # Mots avec une majuscule incorrecte
+      Number = { fg = C_Constant; }; # Nombres
+      Boolean = { fg = C_Constant; }; # Booléens
+      Float = { fg = C_Constant; }; # Nombres à virgule flottante
+
+
+    ErrorMsg = { fg = C_Error; }; # Messages d'erreur
+    DiffDelete = { fg = C_Error; bg = "#4c2128"; }; # Texte supprimé dans la diff
+    SpellBad = { undercurl = true; sp = C_Error; }; # Mots mal orthographiés
+    Error = { fg = C_Error; bg = "NONE"; undercurl = true; }; # Erreurs
+      Todo = { fg = C_Error; bg = "#3c3836"; bold = true; }; # Commentaires TODO
+        Debug = { fg = C_Error; }; # Informations de débogage
+        Statement = { fg = C_Error; }; # Instructions (if; else, for, etc.)
+        Conditional = { fg = C_Error; }; # Instructions conditionnelles (if; else)
+        Repeat = { fg = C_Error; }; # Instructions de répétition (for; while)
+        Keyword = { fg = C_Error; }; # Mots-clés
+        Exception = { fg = C_Error; }; # Exceptions (try; catch, etc.)
+
+      Special = { fg = C_Yellow; }; # Éléments spéciaux (genre les types)
+      Define = { fg = C_Yellow; }; # Directives de définition
+      Identifier = { fg = C_Yellow; }; # Identifiants (variables; fonctions, etc.)
+      PreProc = { fg = C_Yellow; }; # Directives de préprocesseur
+      StorageClass = { fg = C_Yellow; }; # Classes de stockage (static; register, etc.)
+      Title = { fg = C_Yellow; bold = true; }; # Titres
+      PmenuSel = { fg = "#282828"; bg = C_Yellow; }; # Élément sélectionné dans le menu popup
+      MatchParen = { fg = C_Yellow; bg = "#3c3836"; bold = true; }; # Parenthèses correspondantes
+      MoreMsg = { fg = C_Yellow; }; # Message "plus"
+      Search = { fg = "#282828"; bg = C_Yellow; }; # Texte correspondant à la recherche
+      SpellLocal = { undercurl = true; sp = C_Yellow; }; # Mots locaux mal orthographiés
+      WarningMsg = { fg = C_Yellow; }; # Messages d'avertissement
+      WildMenu = { fg = "#282828"; bg = C_Yellow; }; # Menu de complétion
+      Macro = { fg = C_Yellow; }; # Macros
+      PreCondit = { fg = C_Yellow; }; # Directives de préprocesseur conditionnelles
+      CursorLineNr = { fg = C_Yellow; }; # Numéro de ligne de la ligne du curseur
+    };
   };
 }
