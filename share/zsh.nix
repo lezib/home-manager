@@ -34,7 +34,8 @@ in {
       gs = "git status";
       gl = "git log";
       ga = "git add";
-      gm = "git commit -m";
+      gm = "git commit";
+      gmm = "git commit -m";
       gt = "git tag -ma";
       gp = "git push";
       gpt = "git push --follow-tags";
