@@ -22,6 +22,7 @@ in
       xclip # clipboard manager
       go # the language
       docker
+      lazygit
     ];
 
     sessionVariables = {
