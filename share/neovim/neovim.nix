@@ -82,7 +82,7 @@ in {
       nvim-autopairs.enable = true;
       web-devicons.enable = true;
       gitsigns.enable = true;
-      # lspconfig.enable = true;
+      nvim-surround.enable = true;
       treesitter = {
         enable = true;
         nixGrammars = true;
@@ -164,8 +164,6 @@ in {
       neoscroll-nvim
       todo-comments-nvim
       which-key-nvim
-
-      # Temporary ones
     ];
 
     extraConfigLua = readAllExtraConfig [
@@ -174,8 +172,6 @@ in {
       "neoscroll.lua"
       "todo-comments.lua"
       "which-key.lua"
-
-      # Temporary ones
     ];
 
     extraPackages = with pkgs; [
@@ -221,7 +217,7 @@ in {
       { mode = ["n"]; action = "<cmd>Oil --float<CR>"; key = "<leader>ee"; options = { silent = false; desc = "Open"; }; }
       { mode = ["n"]; action = "<cmd>bprev<CR>"; key = "<leader>eh"; options = { silent = false; desc = "prev buffer"; }; }
       { mode = ["n"]; action = "<cmd>bnext<CR>"; key = "<leader>el"; options = { silent = false; desc = "next buffer"; }; }
-      { mode = ["n"]; action = "<cmd>bdelete!<CR>"; key = "<leader>er"; options = { silent = false; desc = "next buffer"; }; }
+      { mode = ["n"]; action = "<cmd>bdelete!<CR>"; key = "<leader>er"; options = { silent = false; desc = "delete buffer"; }; }
 
       { mode = ["n" "v"]; action = "<cmd>UndotreeToggle<CR><cmd>UndotreeFocus<CR>"; key = "<leader>u"; options = { silent = false; desc = "Undotree"; }; }
 
