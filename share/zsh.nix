@@ -8,6 +8,7 @@ let
     "nvimfzf.zsh"
     "cdfzf.zsh"
     "tmuxpfzf.zsh"
+    "autopush.zsh"
   ];
 
   makePath = list: builtins.map (name: "/" + functionsDir + "/" + name) list;
@@ -45,6 +46,7 @@ in {
       glg = "git log --all --oneline --graph";
       gap = "git add -p";
       gsh = "git show";
+      gg = "autopush"; # define in shellscripts
       sql-server = "initdb --locale \"$LANG\" -E UTF8; postgres -k \"$PGHOST\"";
       sql-setup = "createuser -s postgres; createdb -U postgres roger_roger; pg_restore -U postgres -O -d roger_roger ~/afs/ing1/sql/roger_roger.dump";
       sql-run = "psql roger_roger";
