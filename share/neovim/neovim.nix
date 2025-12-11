@@ -83,6 +83,7 @@ in {
       web-devicons.enable = true;
       gitsigns.enable = true;
       nvim-surround.enable = true;
+      render-markdown.enable = true;
       treesitter = {
         enable = true;
         nixGrammars = true;
