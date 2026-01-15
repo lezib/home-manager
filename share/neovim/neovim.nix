@@ -135,12 +135,15 @@ in {
         keymaps = {
           #"" = {action = ""; options = { desc = ""; }; };
           "<leader>ff" = { action = "find_files"; };
-          "<leader>fr" = { action = "oldfiles"; };
           "<leader>fs" = { action = "live_grep"; };
           "<leader>fc" = { action = "grep_string"; };
-          #"<leader>ft" = { action = "TodoTelescope"; };
           "<leader>fb" = { action = "buffers"; };
           "<leader>fw" = { action = "current_buffer_fuzzy_find"; };
+          "<leader>fh" = { action = "highlights"; };
+          "<leader>fx" = { action = "diagnostics"; };
+          "<leader>fo" = { action = "builtin"; };
+          "<leader>fg" = { action = "git_status"; };
+          "<leader>fp" = { action = "planets"; };
 
         };
       };

@@ -1,0 +1,9 @@
+globl foo
+
+foo :
+
+    movq    %rsp, %rbp
+    subq    $16, %rsp
+    movq    %edi, -4(%sbp)
+    movq    %esi, -8(%sbp)
+    movq    %rdx, -16(%sbp)
