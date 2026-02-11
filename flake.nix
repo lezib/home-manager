@@ -16,9 +16,13 @@
 
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+     niri = {
+       url = "github:YaLTeR/niri";
+     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixvim, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nixvim, niri, ... }@inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -27,6 +31,7 @@
       homeConfigurations = {
         "mau" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
+          extraSpecialArgs = { inherit inputs; };
           modules = [ 
             ({
               home.username = "mau";
@@ -52,9 +57,7 @@
             ./home.nix 
             ./share/zsh.nix    # config console
             ./share/tmux.nix   # config tmux
-            # ./share/tmuxp.nix  # config setup of tmux env
             ./share/neovim/neovim.nix
-            # ./share/firefox.nix
             nixvim.homeManagerModules.nixvim
           ];
         };

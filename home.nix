@@ -8,21 +8,20 @@ in
   };
 
   home = {
-    packages = with pkgs; [
-      gnumake # basics gcc commandes
-      tmux # multiplexer
-      zsh
-      oh-my-zsh
-      fzf # fuzzy find
-      bat 
-      fd
-      eza # better ls
-      ripgrep # grep
-      nerd-fonts.caskaydia-mono
-      xclip # clipboard manager
-      go # the language
-      docker
-      lazygit
+    packages = [
+      pkgs.gnumake # basics gcc commandes
+      pkgs.tmux # multiplexer
+      pkgs.zsh
+      pkgs.oh-my-zsh
+      pkgs.fzf # fuzzy find
+      pkgs.bat
+      pkgs.fd
+      pkgs.eza # better ls
+      pkgs.ripgrep # grep
+      pkgs.nerd-fonts.caskaydia-mono
+      pkgs.xclip # clipboard manager
+      pkgs.xwayland-satellite # for niri
+      inputs.niri.packages.${pkgs.system}.niri # version of the overlay
     ];
 
     sessionVariables = {
@@ -45,7 +44,21 @@ in
       enable = true;
       enableZshIntegration = true;
     };
-
-
   };
+
+
+  xdg.configFile."niri/config.kdl".text = ''
+    input {
+        keyboard {
+            xkb {
+                layout "us"
+            }
+        }
+    }
+
+    binds {
+        Mod+Return { spawn "kitty"; }
+        Mod+Q { close-window; }
+    }
+  '';
 }

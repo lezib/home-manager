@@ -1,9 +1,10 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, inputs, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      inputs.niri.nixosModules.niri
     ];
 
   nix = {
@@ -120,8 +121,11 @@
     # fonts = with pkgs; [
     #      (nerdfonts.override { fonts = [ "Caskaydia-cove" ]; })
     #    ];
-  }
+  };
 
-    system.stateVersion = "24.11"; # Did you read the comment?
+  system.stateVersion = "24.11"; # Did you read the comment?
 
+  hardware.graphics.enable = true;
+  programs.niri.enable = true;
+  security.polkit.enable = true;
 }
