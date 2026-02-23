@@ -52,6 +52,12 @@ in {
       sql-run = "psql roger_roger";
     };
 
+    sessionVariables = {
+      PGDATA="$HOME/postgres_data";
+      PGHOST="/tmp";
+      PGPORT="5432";
+    };
+
     oh-my-zsh = {
       enable = true;
       plugins = [
