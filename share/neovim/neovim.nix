@@ -59,7 +59,7 @@ in {
         # autoformat on save for C files
         command = "silent ! clang-format -i %";
         event = [ "BufWritePost" ]; # On write
-        pattern = [ "*.c" "*.cpp" "*.h" "*.hpp"];  # for C and Cpp files
+        pattern = [ "*.c" "*.cpp" "*.cc" "*.hh" "*.h" "*.hpp"];  # for C and Cpp files
       }
       {
         # reset indentation for Lua and Nix files
