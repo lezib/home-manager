@@ -33,7 +33,6 @@ in {
 
       # git aliases
       gs = "git status";
-      gl = "git log";
       ga = "git add";
       gm = "git commit";
       gmm = "git commit -m";
@@ -42,17 +41,23 @@ in {
       gpt = "git push --follow-tags";
       gsw = "git switch";
       gb = "git branch";
-      # advanced
       glg = "git log --all --oneline --graph";
       gap = "git add -p";
       gsh = "git show";
-      gg = "autopush"; # define in shellscripts
+      gg = "autopush"; # defined in shellscripts
+
+      # CPP
+      cmakemake = "cmake -S . -B build/";
+      cmakebuild = "cmake --build build";
+
+      # SQL
       sql-server = "initdb --locale \"$LANG\" -E UTF8; postgres -k \"$PGHOST\"";
       sql-setup = "createuser -s postgres; createdb -U postgres roger_roger; pg_restore -U postgres -O -d roger_roger ~/afs/ing1/sql/roger_roger.dump";
       sql-run = "psql roger_roger";
     };
 
     sessionVariables = {
+      # for only java rush
       PGDATA="$HOME/postgres_data";
       PGHOST="/tmp";
       PGPORT="5432";

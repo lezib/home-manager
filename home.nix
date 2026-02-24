@@ -14,15 +14,13 @@ in
       zsh
       oh-my-zsh
       fzf # fuzzy find
-      bat 
+      bat
       fd
       eza # better ls
       ripgrep # grep
       nerd-fonts.caskaydia-mono
       xclip # clipboard manager
-      go # the language
       docker
-      lazygit
     ];
 
     sessionVariables = {
@@ -33,10 +31,6 @@ in
   };
 
   programs = {
-    #home-manager = {
-    #enable = true;
-    #};
-
     git = {
       enable = true;
     };
@@ -45,7 +39,5 @@ in
       enable = true;
       enableZshIntegration = true;
     };
-
-
   };
 }
