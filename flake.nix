@@ -33,11 +33,13 @@
               home.homeDirectory = "/home/mau";
             })
             ./home.nix 
-            #./share/default.nix
             ./share/zsh.nix    # config console
             ./share/tmux.nix   # config tmux
-            ./share/tmuxp.nix  # config setup of tmux env
+            #./share/tmuxp.nix  # config setup of tmux env
             ./share/neovim/neovim.nix
+            ./share/neovim/plugins.nix
+            ./share/neovim/keymaps.nix
+            ./share/neovim/autoCMD.nix
             ./share/firefox.nix
             nixvim.homeManagerModules.nixvim
           ];
@@ -52,9 +54,10 @@
             ./home.nix 
             ./share/zsh.nix    # config console
             ./share/tmux.nix   # config tmux
-            # ./share/tmuxp.nix  # config setup of tmux env
             ./share/neovim/neovim.nix
-            # ./share/firefox.nix
+            ./share/neovim/plugins.nix
+            ./share/neovim/keymaps.nix
+            ./share/neovim/autoCMD.nix
             nixvim.homeManagerModules.nixvim
           ];
         };
@@ -68,9 +71,10 @@
             ./home.nix 
             ./share/zsh.nix    # config console
             ./share/tmux.nix   # config tmux
-            # ./share/tmuxp.nix  # config setup of tmux env
             ./share/neovim/neovim.nix
-            # ./share/firefox.nix
+            ./share/neovim/plugins.nix
+            ./share/neovim/keymaps.nix
+            ./share/neovim/autoCMD.nix
             nixvim.homeManagerModules.nixvim
           ];
         };
