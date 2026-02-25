@@ -54,6 +54,7 @@
             ./home.nix 
             ./share/zsh.nix    # config console
             ./share/tmux.nix   # config tmux
+            ./share/starship.nix
             ./share/neovim/neovim.nix
             ./share/neovim/plugins.nix
             ./share/neovim/keymaps.nix
