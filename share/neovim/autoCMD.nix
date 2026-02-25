@@ -7,7 +7,7 @@
         # autoformat on save for C files
         command = "silent ! clang-format -i %";
         event = [ "BufWritePost" ]; # On write
-        pattern = [ "*.c" "*.h" "*.cpp" "*.cc" "*.hh" "*.hpp"];  # for C and Cpp files
+        pattern = [ "*.c" "*.h" "*.cc" "*.hh" "*.hxx" "*.hpp" "*.cpp"];  # for C and Cpp files
       }
       {
         # reset indentation for Lua and Nix files
@@ -19,7 +19,7 @@
         # reset indentation for C and Python files
         command = "set tabstop=4 | set shiftwidth=4";
         event = [ "BufEnter" ];
-        pattern = [ "*.[hc]" "*.cc" ".hh" "*.py" ];
+        pattern = [ "*.[hc]" "*.cc" "*.hh" "*.hxx" "*.py" ];
       }
     ];
   };
