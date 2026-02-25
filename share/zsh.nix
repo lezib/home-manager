@@ -49,6 +49,7 @@ in {
       # CPP
       cmakemake = "cmake -S . -B build/";
       cmakebuild = "cmake --build build";
+      cppf = "g++ -Wall -Wextra -Werror -pedantic -std=c++20 -Wold-style-cast";
 
       # SQL
       sql-server = "initdb --locale \"$LANG\" -E UTF8; postgres -k \"$PGHOST\"";

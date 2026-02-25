@@ -93,7 +93,7 @@
       {
         mode = ["n"];
         action = "<cmd>silent ! clang-format -i %<CR>";
-        key = "<leader>=";
+        key = "<leader>r";
         options = { silent = false; desc = "Force clang-format"; }; 
       }
     ];
