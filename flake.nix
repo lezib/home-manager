@@ -79,6 +79,23 @@
             nixvim.homeManagerModules.nixvim
           ];
         };
+        "litissia.ben-mohand" = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          modules = [ 
+            ({
+              home.username = "litissia.ben-mohand";
+              home.homeDirectory = "/home/litissia.ben-mohand";
+            })
+            ./home.nix 
+            ./share/zsh.nix    # config console
+            # ./share/tmux.nix   # config tmux
+            ./share/neovim/neovim.nix
+            ./share/neovim/plugins.nix
+            ./share/neovim/keymaps.nix
+            ./share/neovim/autoCMD.nix
+            nixvim.homeManagerModules.nixvim
+          ];
+        };
       };
     };
 }
